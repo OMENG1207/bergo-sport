@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>BERGO SPORT JERSEY — Soft Rose</title>
+  <meta name="description" content="Bergo Sport Jersey — praktis, adem, dan sporty. Pilihan warna lengkap, promo spesial hari ini." />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* =============== Mobile-first inline CSS =============== */
+    :root{
+      --page-max:430px;
+      --bg-top:#fff6f7;        /* soft rose top */
+      --bg-bottom:#fffaf9;     /* ivory */
+      --card:#ffffff;
+      --muted:#8b6e6b;
+      --text:#2b2120;
+      --line:rgba(140,105,102,0.06);
+      --shadow: 0 12px 30px rgba(110,80,78,0.06);
+      --radius:14px;
+      --accent:#e9aeb3;        /* blush accent */
+      --accent-strong:#d67a86;
+      --soft:#fbefef;
+    }
+
+    html,body{height:100%;margin:0;padding:0;background:linear-gradient(180deg,var(--bg-top),var(--bg-bottom));font-family:"Lato",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);-webkit-text-size-adjust:100%;}
+    .wrap{max-width:var(--page-max);margin:0 auto;padding:14px;box-sizing:border-box;}
+    .card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);animation:fadeIn .35s ease both;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+    img.full{display:block;width:100%;height:auto;object-fit:cover;}
+    .hero{border-radius:12px 12px 0 0;overflow:hidden;}
+
+    /* Title & description */
+    .meta{padding:14px;}
+    .title{font-size:20px;font-weight:700;margin:0 0 6px 0;color:var(--accent-strong);line-height:1.05;}
+    .subtitle{font-size:13px;color:var(--muted);margin-bottom:8px;font-weight:600;}
+    .desc{font-size:14px;color:var(--text);line-height:1.55;margin:0 0 8px;font-weight:400;}
+
+    .specs{margin-top:10px;display:flex;flex-direction:column;gap:8px;}
+    .spec{background:linear-gradient(180deg,#fff,#fff);border:1px solid var(--line);padding:10px;border-radius:12px;font-size:13px;color:var(--muted);}
+
+    /* Details */
+    .details{padding:12px;border-top:1px solid var(--line);}
+    .detail-row{display:flex;gap:10px;align-items:flex-start;margin:10px 0;}
+    .ico{min-width:38px;height:38px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text);}
+    .d-text{flex:1;font-size:14px;color:var(--text);}
+    .d-text strong{display:block;font-weight:700;margin-bottom:4px;color:var(--text);}
+    .d-sub{font-size:13px;color:var(--muted);margin-top:4px;}
+
+    /* Gallery */
+    .gallery{padding:12px;border-top:1px solid var(--line);}
+    .gallery h3{margin:0 0 10px;font-size:16px;font-weight:700;color:var(--text);}
+    .gallery figure{margin:0 0 12px;}
+    .gallery img{width:100%;height:auto;border-radius:12px;display:block;}
+    .gallery figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:left;}
+
+    /* Variants */
+    .variants{padding:12px;border-top:1px solid var(--line);}
+    .variants h3{margin:0 0 10px;font-size:16px;font-weight:700;color:var(--text);}
+    .v-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+    .v-card{background:linear-gradient(180deg,#fff,#fffaf9);padding:8px;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;}
+    .v-card img{width:100%;height:auto;border-radius:10px;display:block;}
+    .v-caption{margin-top:8px;font-size:13px;color:var(--muted);text-align:center;font-weight:600;}
+
+    /* Testimonials */
+    .testi{padding:12px;border-top:1px solid var(--line);}
+    .testi h3{margin:0 0 8px;font-size:16px;font-weight:700;color:var(--text);}
+    .t-card{background:linear-gradient(180deg,#fff,#fff9f8);padding:12px;border-radius:12px;margin-bottom:10px;border:1px solid var(--line);}
+    .t-name{font-weight:700;color:var(--text);font-size:13px;}
+    .t-text{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.45;}
+
+    /* Promo & price + countdown */
+    .promo{padding:12px;border-top:1px solid var(--line);}
+    .promo-box{background:linear-gradient(90deg,#fff7f8,#fffaf9);padding:12px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);}
+    .p-left{font-size:13px;color:#6b4544;font-weight:800;}
+    .p-price{font-size:20px;font-weight:900;margin-top:6px;color:var(--accent-strong);}
+    .p-old{font-size:13px;color:var(--muted);text-decoration:line-through;margin-top:6px;}
+    .p-save{font-weight:800;color:#7a504f;font-size:13px;margin-top:6px;}
+    .p-right{text-align:right;}
+    .count{background:#fff;padding:8px 10px;border-radius:10px;box-shadow:0 6px 16px rgba(110,76,69,0.04);font-weight:800;color:var(--accent-strong);font-size:14px;}
+
+    /* Notes */
+    .notes{padding:12px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+    .notes ul{padding-left:18px;margin:8px 0 0;}
+
+    /* Banner above form */
+    .order-visual{padding:12px;border-top:1px solid var(--line);}
+    .img-wrap{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);}
+    .sticker{position:absolute;right:12px;top:12px;background:var(--accent);padding:8px 10px;border-radius:10px;font-weight:800;color:#fff;box-shadow:0 8px 20px rgba(123,78,78,0.06);font-size:13px;transform:rotate(-6deg);}
+    .sticker small{display:block;font-size:11px;font-weight:700;color:rgba(255,255,255,0.95);}
+
+    /* Form area */
+    .form-area{padding:12px;border-top:1px solid var(--line);background:linear-gradient(180deg,#fff,#fff);border-bottom-left-radius:16px;border-bottom-right-radius:16px;}
+    .form-title{font-weight:700;font-size:15px;color:var(--text);margin:0 0 8px;}
+    .form-note{font-size:13px;color:var(--muted);margin-bottom:10px;}
+    .ooef{background:linear-gradient(180deg,#fff,#fff);padding:8px;border-radius:10px;border:1px solid var(--line);}
+
+    .foot{padding:12px;text-align:center;font-size:12px;color:var(--muted);}
+
+    /* utilities */
+    @media(min-width:440px){ .wrap{padding:18px;} .v-grid{grid-template-columns:repeat(3,1fr);} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <main class="card" role="main" aria-labelledby="prod-title">
+
+      <!-- 1. Gambar Utama -->
+      <header class="hero" aria-hidden="false">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-81zti-mf3ldvxnjyfjdc.webp" alt="Bergo Sport Jersey - gambar utama" class="full">
+      </header>
+
+      <!-- 2. Judul & Deskripsi -->
+      <section class="meta" id="meta">
+        <h1 id="prod-title" class="title">BERGO SPORT JERSEY</h1>
+        <div class="subtitle">🧕 Bergo Sport Jersey – Praktis, Nyaman & Tetap Stylish Saat Aktif!</div>
+
+        <p class="desc">Tampil sporty dan tetap syar’i dengan Bergo Sport Jersey, hijab instan yang dibuat dari jersey premium — adem, lentur, dan ringan. Dilengkapi lubang tersembunyi di sisi telinga untuk earphone/kacamata, serta karet dagu agar tetap fit seharian.</p>
+
+        <div class="specs" aria-hidden="false">
+          <div class="spec"><strong>Spesifikasi</strong><br>Panjang Depan: 42 cm • Panjang Belakang: 52 cm • Lingkar Wajah: 22 x 2 cm • Material: Jersey Premium</div>
+        </div>
+      </section>
+
+      <!-- 3. Detail & Keunggulan -->
+      <section class="details" aria-labelledby="detail-heading">
+        <h2 id="detail-heading" style="margin:0 0 8px;font-weight:700;color:var(--text)">Detail & Keunggulan</h2>
+
+        <div class="detail-row">
+          <div class="ico">💨</div>
+          <div class="d-text"><strong>Adem & Lentur</strong><div class="d-sub">Nyaman untuk olahraga & aktivitas harian</div></div>
+        </div>
+
+        <div class="detail-row">
+          <div class="ico">🎧</div>
+          <div class="d-text"><strong>Lubang Tersembunyi</strong><div class="d-sub">Memudahkan pakai earphone, kacamata, atau masker</div></div>
+        </div>
+
+        <div class="detail-row">
+          <div class="ico">🤍</div>
+          <div class="d-text"><strong>Karet Elastis di Dagu</strong><div class="d-sub">Membuat hijab tetap rapi tanpa mudah bergeser</div></div>
+        </div>
+
+        <div class="detail-row">
+          <div class="ico">✨</div>
+          <div class="d-text"><strong>Instan & Praktis</strong><div class="d-sub">Tinggal pakai, langsung sporty dan anggun</div></div>
+        </div>
+      </section>
+
+      <!-- 4. Gallery -->
+      <section class="gallery" aria-labelledby="gallery-heading">
+        <h3 id="gallery-heading">Foto Detail Produk</h3>
+
+        <figure>
+          <img src="https://img.lazcdn.com/g/p/1141a671fc490b22d2b14869c20d523a.png_720x720q80.png" alt="Bergo - detail 1">
+          <figcaption>Bergo sport tampak depan — potongan modern dan pas di wajah.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98v-lxou5wvhqznhce.webp" alt="Bergo - detail 2">
+          <figcaption>Lubang tersembunyi untuk earphone/kacamata.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lxou5wvhse7x89.webp" alt="Bergo - detail 3">
+          <figcaption>Karet dagu elastis — nyaman dan tidak mudah bergeser.</figcaption>
+        </figure>
+      </section>
+
+      <!-- 5. Varian Warna -->
+      <section class="variants" aria-labelledby="variants-heading">
+        <h3 id="variants-heading">Pilihan Varian Warna</h3>
+        <div class="v-grid" role="list" aria-label="Daftar varian warna">
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98u-lxourgj8cpjve4.webp" alt="Black">
+            <div class="v-caption">Black</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lxourgj8e44b99.webp" alt="Navy">
+            <div class="v-caption">Navy</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lxourgj8fior2f.webp" alt="Butter">
+            <div class="v-caption">Butter</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r990-lxourgj8gx97a9.webp" alt="Maroon">
+            <div class="v-caption">Maroon</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lxourgj8ibtn96.webp" alt="Mocca">
+            <div class="v-caption">Mocca</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r992-lxourgj8jqe3bf.webp" alt="Peanut">
+            <div class="v-caption">Peanut</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98u-lxourgj8l4yj65.webp" alt="Dark Choco">
+            <div class="v-caption">Dark Choco</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98q-lxourgj8mjiza7.webp" alt="Dark Grey">
+            <div class="v-caption">Dark Grey</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lxourgj8ny3f1a.webp" alt="Dusty Pink">
+            <div class="v-caption">Dusty Pink</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98r-lxourgj8pcnva1.webp" alt="Silver">
+            <div class="v-caption">Silver</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98s-lxourgj8qr8bae.webp" alt="Army">
+            <div class="v-caption">Army</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98w-lxouwypecqlo04.webp" alt="Milky">
+            <div class="v-caption">Milky</div>
+          </div>
+
+          <div class="v-card" role="listitem">
+            <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98t-lxouwypee564d2.webp" alt="Jeans">
+            <div class="v-caption">Jeens</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Testimoni -->
+      <section class="testi" aria-labelledby="testi-heading">
+        <h3 id="testi-heading">Testimoni Pelanggan</h3>
+
+        <div class="t-card" role="article">
+          <div class="t-name">Nadya — Bandung</div>
+          <div class="t-text">"Praktis banget dipakai untuk olahraga pagi. Bahannya adem dan elastis — nyaman saat bergerak."</div>
+        </div>
+
+        <div class="t-card" role="article">
+          <div class="t-name">Ika — Malang</div>
+          <div class="t-text">"Lubang earphone-nya membantu banget, saya bisa pakai headset saat jogging. Warna dusty pinknya lucu."</div>
+        </div>
+
+        <div class="t-card" role="article">
+          <div class="t-name">Maya — Jakarta</div>
+          <div class="t-text">"Karet dagu pas dan gak bikin sakit. Recommended untuk yang cari hijab instan sporty."</div>
+        </div>
+      </section>
+
+      <!-- 7 & 9. Promo/Countdown + Price -->
+      <section class="promo" aria-labelledby="promo-heading">
+        <h3 id="promo-heading" style="margin:0 0 8px;font-size:16px;font-weight:700;color:var(--text)">PROMO SPESIAL HARI INI</h3>
+        <div class="promo-box" role="region" aria-live="polite" aria-atomic="true">
+          <div class="p-left">
+            <div style="font-size:13px;font-weight:800;color:#6b4544;">Dapatkan Diskon Spesial Untuk Hari Ini Saja</div>
+            <div class="p-price">Rp 139.000</div>
+            <div class="p-old">Harga Normal Rp 179.000</div>
+            <div class="p-save">Anda Hemat Rp 40.000</div>
+          </div>
+          <div class="p-right">
+            <div style="font-size:12px;color:var(--muted);">HARGA AKAN KEMBALI NORMAL SETELAH</div>
+            <div id="countdown" class="count" aria-label="Waktu promo berakhir">--:--:--</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Notes -->
+      <section class="notes" aria-labelledby="note-heading">
+        <h3 id="note-heading" style="margin:0 0 6px;font-size:15px;font-weight:700;color:var(--text)">Note Pemesanan & Pengiriman</h3>
+        <ul>
+          <li>Pengiriman 2 - 4 Hari Setelah Pemesanan</li>
+          <li>Mohon Isi Alamat Dengan Lengkap</li>
+          <li>100% Product Original</li>
+        </ul>
+      </section>
+
+      <!-- 10. Banner above form -->
+      <section class="order-visual" aria-hidden="false">
+        <div style="padding:12px;">
+          <div class="img-wrap">
+            <img src="https://i.postimg.cc/K8xMnLdG/codgif-ezgif-com-crop.gif" alt="Promo Banner" class="full">
+            <div class="sticker" aria-hidden="true">DISKON SPESIAL <small>HARI INI</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. Form Pemesanan (embed) -->
+      <section class="form-area" aria-labelledby="form-heading">
+        <h3 id="form-heading" class="form-title">Form Pemesanan</h3>
+        <div class="form-note">Isi data lengkap untuk memudahkan proses pengiriman. Jika embed belum muncul, tunggu beberapa detik sampai script termuat.</div>
+
+        <div class="ooef" aria-live="polite">
+          <!-- OrderOnline Embed Code - v8.0.4 (provided) -->
+          <form class="orderonline-embed-form" data-username="vita" data-product-slug="bergo-sport-jersey" data-product-id="69147d314c3ad11c40084e7a" id="oo-embed-form-bergo-sport-jersey-4968" data-origin="orderonline">
+            <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+          </form>
+        </div>
+
+        <script>
+          if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; }
+          try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://vita.orderonline.id'); ooe('init', '5f1a8627a9bf8058b0424f32', '69147d314c3ad11c40084e7a', '69147d314c3ad11c40084e7b', 'oo-embed-form-bergo-sport-jersey-4968', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script>
+
+      </section>
+
+      <div style="height:10px;"></div>
+    </main>
+
+    <footer class="foot">© <span id="yr"></span> Vita • Semua hak dilindungi.</footer>
+  </div>
+
+  <!-- Countdown JS (ends at 23:59:59 local device time) -->
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    (function(){
+      var el = document.getElementById('countdown');
+      function pad(n){ return n<10 ? '0'+n : n; }
+      function tick(){
+        var now = new Date();
+        var end = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23,59,59);
+        var diff = end - now;
+        if(diff <= 0){ if(el) el.textContent = '00:00:00'; return; }
+        var s = Math.floor(diff/1000);
+        var h = Math.floor(s/3600); s -= h*3600;
+        var m = Math.floor(s/60); s -= m*60;
+        if(el) el.textContent = pad(h)+':'+pad(m)+':'+pad(s);
+      }
+      tick();
+      setInterval(tick,1000);
+    })();
+  </script>
+</body>
+</html>
